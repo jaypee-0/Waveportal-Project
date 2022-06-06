@@ -165,7 +165,7 @@ useEffect(() => {
 
   return (
     <div className='mainContainer'>
-      <div className='dataContainer'>
+      <div className='dataContainer container'>
         <div className='text-center'>
             <div><img className='img-fluidx' src={currentAccount ? (loadingwave ? happyImage: finalImage ) : (loadingconnect ? loadingImage : initialImage)} alt="" /></div> 
         </div>
@@ -177,11 +177,11 @@ useEffect(() => {
           Could you help me out by connecting to your Ethereum wallet? <br/> and then wave at me!
         </div>
 
-        <button className='waveButton' onClick={currentAccount && wave}>
+        <button className='waveButton rounded' onClick={currentAccount && wave}>
           Wave at Me
         </button>
         {!currentAccount && (
-          <button className='waveButton' onClick={connectWallet}>
+          <button className='waveButton rounded' onClick={connectWallet}>
           {loadingconnect ? 'Connecting...' : 'Connect Wallet'} 
           </button>
         )}

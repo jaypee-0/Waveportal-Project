@@ -1,5 +1,13 @@
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
 
+body {
+  background-color: #f7f7f8;
+  background-image: url('./Assets/background.png');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
 .mainContainer {
   display: flex;
   justify-content: center;
@@ -18,6 +26,9 @@
   text-align: center;
   font-size: 32px;
   font-weight: 600;
+  @media screen and (max-width: 768px) {
+    font-size: 24px;
+  }
 }
 
 .bio {
@@ -29,9 +40,11 @@
   cursor: pointer;
   margin-top: 16px;
   padding: 8px;
-  border: 0;
-  border-radius: 5px;
-
+  border: 1px solid #fd79417f;
+  &:hover, :focus, :visited {
+    background-color: #d0d0d3ba;
+    border: 1px solid #0000007f;
+  }
 }
 
 .img-fluidx {
